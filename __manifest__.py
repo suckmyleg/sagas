@@ -3,17 +3,15 @@
     'name': "Sagas",
     'summary': "Gestion de sagas",
     'description': """
-                    Gestor de Sagas
-                    ==============
-                    """,  
-
+        Gestor de Sagas
+        ==============
+        """,  
     'application': True,
     'author': "Autor",
     'website': "website",
     'category': 'Tools',
     'version': '0.1',
     'depends': ['base'],
-
     'data': [
         'security/groups.xml',
         'security/ir.model.access.csv',
