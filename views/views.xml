@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='sagas_view_action' model='ir.actions.act_window'>
+        <field name="name">Sagas</field>
+        <field name="res_model">sagas.saga</field>
+        <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+    <record id="sagas_view_form" model="ir.ui.view">
+        <field name="name">Formulario de Saga</field>
+        <field name="model">sagas.saga</field>
+        <field name="arch" type="xml">
+        <form>
+            <header></header>
+            <group>
+                <group>
+                    <field name="nombre"/>
+                    <field name="fecha"/>
+                    <field name="genero"/>
+                </group>
+                <group>
+                    <field name="ids_libros" widget="many2many_tags"/>
+                </group>
+            </group>
+            <group>
+                <field name="descripcion"/>
+            </group>
+    </record>
+
+    <menuitem name="Sagas" id="sagas_root"/>
+    <menuitem name="Sagas" id="sagas_menu" parent="sagas_menu" action="sagas_view_action"/>
+</odoo>
